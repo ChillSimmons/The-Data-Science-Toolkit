@@ -35,7 +35,7 @@ We selected the (free) * *Ubuntu Server 16.04 LTS (HVS), SSD Volume type - ami b
 Next we chose a t2.micro type virtual server (Instance)
 - This option comes with 1 CPU and 1 GiB Memory with our Free Tier Service
 
-We adjusted the GiB Size (in the Next tab), increasing it form 8 to 20.
+We adjusted the GiB Size (in the Next tab), increasing it from 8 to 20.
 
 We did Not add Tags.
 

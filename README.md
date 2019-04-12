@@ -122,7 +122,7 @@ We assigned an * *Existing Security Group* *
   
   ## 8. Jupyter Notebook Security Concerns
   
-  The two-way connection established by the command `$ -v /home/ubuntu:home/jovyan jupyter/datascience-notebook` allows for deletion in the Terminal of the shell, while still being able to access the notebook file as it exits in multiple places. 
+  The two-way connection established by the command `$ -v /home/ubuntu:home/jovyan jupyter/datascience-notebook` allows for deletion in the Terminal of the shell, while still being able to access the notebook file as it exists in multiple places. 
   
   Virtually all IP addresses are constantly pinged for lack of security. 
   

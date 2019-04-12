@@ -1,4 +1,4 @@
-# Wk-4---The-Data-Science-Toolkit
+# The-Data-Science-Toolkit
 
 ## 1. SSH Keys
 

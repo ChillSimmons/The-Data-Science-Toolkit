@@ -64,7 +64,7 @@ We assigned an * *Existing Security Group* *
   After selecting the Ubuntu Server 16.04 LTS (HVS), SSD Volume type - ami ba602bc,
   
   we chose a t2.micro type virtual server (Instance).
-  - with our free tier service, this option comes with 1 CUP and 1 GiB Memory
+  - with our free tier service, this option comes with 1 CPU and 1 GiB Memory
   
   We return to our Terminal, and execute the `$ ssh git@github.com` command. 
   We then execute the remote command to our Terminal's IP `$ ubuntu@_ip.address_`

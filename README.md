@@ -90,7 +90,7 @@ We assigned an * *Existing Security Group* *
   - `$ ssh ubuntu@_ip.address_`
   
   You then enter a new shell, by typing `$ tmux`
-  - tmux allows returnt to Terminals you left, without interrupting the running processes, while accessing multiple separate Terminal sessions. 
+  - tmux allows return to Terminals you left, without interrupting the running processes, while accessing multiple separate Terminal sessions. 
   - as a shell-server, it jumps to a (more) stable AWS stash, and runs as a software.
   
   

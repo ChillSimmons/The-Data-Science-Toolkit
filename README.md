@@ -4,18 +4,18 @@
 
 SSH (Secure Shell) Keys allow access to SSH Protocol. Key Pairs, including the public and private keys, provide for interaction, remotely logging in to various systems, managing infrastructure, etc. 
 
-SSH keys can be created by making a .ssh directory in a Terminal ($ **mkdir -p .ssh**).
+SSH keys can be created by making a .ssh directory in a Terminal `$ mkdir -p .ssh`.
 - The **-p**, serves as a command to interpret .ssh
-- The Key Pairs are generated ($ **ssh-keygen**)
-- The Public Key can be displayed ($ **cat ~/.ssh/id.rsa.pub**)
+- The Key Pairs are generated `$ ssh-keygen`
+- The Public Key can be displayed `$ cat ~/.ssh/id.rsa.pub`
 
 We needed to sync these keys with GitHub.
 
 A Copy of the Public Key was set to our Desktop.
-- ($ **cat ~/.ssh/id.rsa.pub | pbcopy**), produces a clipboarded copy
-- ($ **cp ~/.ssh/id_rsa.pub ~/Desktop**), places the copy on the Desktop
+- `$ cat ~/.ssh/id.rsa.pub | pbcopy`, produces a clipboarded copy
+- `$ cp ~/.ssh/id_rsa.pub ~/Desktop`, places the copy on the Desktop
 
-- ($ **ssh git@github.com**)
+- `$ ssh git@github.com`
 
 **ssh** is used to log and execute commands into remote machines.
 
@@ -66,19 +66,19 @@ We assigned an * *Existing Security Group* *
   we chose a t2.micro type virtual server (Instance).
   - with our free tier service, this option comes with 1 CUP and 1 GiB Memory
   
-  We return to our Terminal, and execute the ($ **ssh git@github.com**) command. 
-  We then execute the remote command to our Terminal's IP ($ **ubuntu@_ip.address_**)
+  We return to our Terminal, and execute the `$ ssh git@github.com` command. 
+  We then execute the remote command to our Terminal's IP `$ ubuntu@_ip.address_`
   
   
  ## 5. Docker Installation
   
-  Again, we should have already returned to the Terminal and typed ($ **ubuntu@_ip.address_**)
+  Again, we should have already returned to the Terminal and typed `$ ubuntu@_ip.address_`
   
   if asked permission to Continue, type **yes**
   
-  Create the Docker Group, by typing ($ **curl -sSL https://get.docker.com | sh**)
+  Create the Docker Group, by typing `$ curl -sSL https://get.docker.com | sh`
   
-  Add our Ubuntu User to the Docker Security Group (without doing this, we would have to put **sudo** in front of Docker every time we use it), by typing ($ **sudo usermod -aG docker ubuntu**)
+  Add our Ubuntu User to the Docker Security Group (without doing this, we would have to put **sudo** in front of Docker every time we use it), by typing `$ sudo usermod -aG docker ubuntu`
   
   Then, type **exit**
   - Leaving our Instance, and returning to Local
@@ -87,9 +87,9 @@ We assigned an * *Existing Security Group* *
   This was necessary to load our new security. 
   
   Docker performers containerization (operating-system-level virtualization). It runs containers, or software packages. If you preveiously exited the shell (which again, may be necessary to re-evaluate group membership), you can return with, 
-  - ($ **ssh ubuntu@_ip.address_**)
+  - `$ ssh ubuntu@_ip.address_`
   
-  You then enter a new shell, by typing ($ **tmux**)
+  You then enter a new shell, by typing `$ tmux`
   - tmux allows returnt to Terminals you left, without interrupting the running processes, while accessing multiple separate Terminal sessions. 
   - as a shell-server, it jumps to a (more) stable AWS stash, and runs as a software.
   
@@ -98,21 +98,21 @@ We assigned an * *Existing Security Group* *
   
   Confirm that following Installation, you can run Docker commands without sudo. 
   
-  Access ($ **docker pull jupyter/datascience-notebook**)
+  Access `$ docker pull jupyter/datascience-notebook`
   
   
   ## 7. Running the Correct Docker Image as a Container 
   
   We ran this rather long command more succinctly, 
-  - ($ docker run \ )
-  - ($ -d \ )
-  - ($ -p 443:8888 \ )
-  - ($ **-v /home/ubuntu:home/jovyan jupyter/datascience-notebook**)
+  - `$ docker run \ `
+  - `$ -d \ `
+  - `$ -p 443:8888 \ `
+  - `$ -v /home/ubuntu:home/jovyan jupyter/datascience-notebook`
     - there are NO spaces after the forward slash when executing the command
     
   We can retrieve the Token, which will be used later from the Container.
-  - ($ **docker ps**)
-  - ($ **docker exec _containerID(or first 4 digits)_ jupyter notebook list
+  - `$ docker ps`
+  - `$ docker exec _containerID(or first 4 digits)_ jupyter notebook list`
   
   Go to _ip.address:443_ in Google.
   - Insert the Token into the space and Login
@@ -122,7 +122,7 @@ We assigned an * *Existing Security Group* *
   
   ## 8. Jupyter Notebook Security Concerns
   
-  The two-way connection established by the command ($ **-v /home/ubuntu:home/jovyan jupyter/datascience-notebook**) allows for deletion in the Terminal of the shell, while still being able to access the notebook file as it exits in multiple places. 
+  The two-way connection established by the command `$ -v /home/ubuntu:home/jovyan jupyter/datascience-notebook` allows for deletion in the Terminal of the shell, while still being able to access the notebook file as it exits in multiple places. 
   
   Virtually all IP addresses are constantly pinged for lack of security. 
   
@@ -130,7 +130,7 @@ We assigned an * *Existing Security Group* *
   ## 9. Anything Forgotten
   
   Another way to abbreviate the image as a Container, would be to use the command,
-   ($ **echo 'alias j="docker run -d -p 443:8888 -v /home/unbuntu:/home/jovyan jupyter/datascience-notebook"'>>profile**), reducing the larger command to an alias j. 
+   `$ echo 'alias j="docker run -d -p 443:8888 -v /home/unbuntu:/home/jovyan jupyter/datascience-notebook"'>>profile`, reducing the larger command to an alias j. 
    
    
    ## 10. Create at least one diagram of your overall system

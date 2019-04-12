@@ -86,7 +86,7 @@ We assigned an * *Existing Security Group* *
   
   This was necessary to load our new security. 
   
-  Docker performers containerization (operating-system-level virtualization). It runs containers, or software packages. If you preveiously exited the shell (which again, may be necessary to re-evaluate group membership), you can return with, 
+  Docker performs containerization (operating-system-level virtualization). It runs containers, or software packages. If you preveiously exited the shell (which again, may be necessary to re-evaluate group membership), you can return with, 
   - `$ ssh ubuntu@_ip.address_`
   
   You then enter a new shell, by typing `$ tmux`
